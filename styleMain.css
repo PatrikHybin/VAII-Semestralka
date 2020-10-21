@@ -9,7 +9,7 @@ body {
 }
 
 .home{
-    margin: 0px;
+    margin: 0;
 }
 
 ul {
@@ -52,7 +52,7 @@ header {
     justify-content: space-between;
     margin-bottom: 0;
     padding: .8em 2em ;
-    background-image: linear-gradient(to bottom right, red, yellow, orange);
+    background-image: linear-gradient(to bottom right, lightgreen, yellow, orange);
 }
 
 .menuImgMobile {
@@ -62,12 +62,12 @@ header {
 
 .container {
     box-sizing: border-box;
-    background-image: linear-gradient(to left, silver, grey, silver);
+    background-image: linear-gradient(to left, aqua , cyan , azure);
 }
 
 .myContainer {
     text-align: left;
-    padding: 0px;
+    padding: 0;
 }
 
 .vertical { 
@@ -110,7 +110,6 @@ p {
 }
 
 .box input[type = "text"],.box input[type = "password"]{
-    border:0;
     background: none;
     display: block;
     margin: 20px auto;
@@ -129,7 +128,6 @@ p {
 }
 
 .box input[type = "submit"]{
-    border:0;
     background: none;
     display: block;
     margin: 20px auto;
