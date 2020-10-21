@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    background-image: url(images/nature.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.home{
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.mobileMenu {
+    display: inline;
+}
+
+.desktopMenu {
+    display: none;
+}
+
+.mobileArch {
+    display: inline;
+}
+
+.desktopArch {
+    display: none;
+}
+
+.myLogo {
+    width: 75px;
+    background-image: linear-gradient(to bottom right,red, yellow, orange);
+}
+
+.bookCover {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: .8em 2em ;
+    background-image: linear-gradient(to bottom right, red, yellow, orange);
+}
+
+.menuImgMobile {
+    width: 30px;
+    margin-top: -2px;
+}
+
+.container {
+    box-sizing: border-box;
+    background-image: linear-gradient(to left, silver, grey, silver);
+}
+
+.myContainer {
+    text-align: left;
+    padding: 0px;
+}
+
+.vertical { 
+    border-left: 6px solid black; 
+    height: 190px; 
+    position: absolute; 
+    left: 50%; 
+} 
+
+.horizontal {
+    height:3px;
+    color: #000000;
+    border-top: 6px solid black;
+    
+}
+
+p {
+    text-align: left;
+    position: absolute;
+    margin-top: 10px;
+    font-size: 25px;  
+}
+
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    text-align: center;
+}
+
+.box h1{
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1cm;
+}
+
+.box input[type = "text"],.box input[type = "password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #000000;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    border-color: #2ecc71;
+}
+
+.box input[type = "submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 40px;
+    outline: none;
+    color: #000000;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type = "submit"]:hover{
+    background: #2ecc71;
+}
+
+
+@media only screen and (min-width: 650px)  {
+
+    .bookCover {
+        width: 75px;
+        height: 75px;
+        margin: 4px 0;
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 991px)  {
+
+    .bookCover {
+        width: 85px;
+        height: 85px;
+        margin: 4px 0;
+    }
+
+    p {
+        margin-left: -30px;
+    }
+
+    .mobileMenu {
+        display: none;
+    }
+
+    .desktopMenu {
+        display: inline-block;
+    }
+
+    .mobileArch {
+        display: none;
+    }
+
+    .desktopArch {
+        display: inline
+    }
+
+    .inline li a {
+        color: white;
+    }
+    
+    .inline li {
+        border-radius: 8px;
+        background-color: green;
+        padding: 5px;
+        border: 1px solid;
+        margin: 0;
+        display: inline;
+    }
+
+
+}
+
+@media only screen and (min-width: 1024px)  {
+
+    .bookCover {
+        width: 100px;
+        height: 100px;
+        margin: 5px 0;
+    }
+
+    p {
+        margin-left: 20px;
+    }
+
+    p.nazov {
+        text-align: left;
+        position: absolute;
+        margin-top: 35px;
+        margin-left: -50px;
+        font-size: 25px;  
+    }
+    
+
+} 
+
+@media only screen and (min-width: 1200px)  {
+
+    .bookCover {
+        width: 100px;
+        height: 100px;
+        margin: 5px 0;
+    }
+
+
+    p {
+        margin-left: 40px;
+    }
+
+    p.nazov {
+        text-align: left;
+        position: absolute;
+        margin-top: 35px;
+        margin-left: -70px;
+        font-size: 25px;  
+    }
+    
+
+}
+
+
+
+

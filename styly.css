@@ -1,0 +1,129 @@
+html,body {
+    margin: 0;
+
+}
+body {
+    padding-left: 100px;
+    padding-right: 100px;
+    background-image: linear-gradient(to right, #26a07e, #7fe588);
+    padding-bottom: 10px;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.text1 {
+    padding-right: 100px;
+    padding-top: 50px;
+    color: black;
+}
+
+.nav {
+    padding-left: 0;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.nav li {
+    border-radius: 8px;
+    background-color: aqua;
+    padding: 5px;
+    border: 1px solid;
+    margin: 0;
+    display: inline-block;
+}
+
+.lorem {
+    margin-top: 50px;
+    margin-right: 5px;
+    height: 150px;
+    width: 300px;
+    float: left;
+    border: solid black 2px;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template:  "1fr 1fr" 33.33vh
+                    "1fr 1fr" 33.33vh
+                    "1fr 1fr" 33.33vh;
+    grid-gap: 5px;
+}
+
+.container .box {
+    position: relative;
+    background: #ccc;
+    border: 2px solid black;
+    height: auto;
+}
+
+.container .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 991px) {
+    .container {
+
+        grid-template:  "1fr" 33.33vh
+                        "1fr" 33.33vh
+                        "1fr" 33.33vh
+                        "1fr" 33.33vh
+                        "1fr" 33.33vh
+                        "1fr" 33.33vh;
+    }
+
+    .container .box {
+        height: 33.33vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+
+        grid-template:  "1fr" 250px
+                        "1fr" 250px
+                        "1fr" 250px
+                        "1fr" 250px
+                        "1fr" 250px
+                        "1fr" 250px;
+    }
+
+    .container .box {
+        height: 250px;
+    }
+
+    .nav li {
+        border-radius: 8px;
+        background-color: aqua;
+        padding-bottom: 5px;
+        border: 1px solid;
+        margin-bottom: 5px;
+        width: fit-content;
+        display: block;
+    }
+}
+
+
