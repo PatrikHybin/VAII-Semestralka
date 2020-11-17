@@ -1,3 +1,6 @@
+hmtl {
+    background-color: #464646;
+}
 body {
     margin: 0;
     background-image: url(images/nature.jpg);
@@ -44,6 +47,7 @@ ul {
     width: 50px;
     height: 50px;
     margin: 5px 0;
+
 }
 
 
@@ -66,8 +70,8 @@ header {
 }
 
 .myContainer {
+    padding-top: 0;
     text-align: left;
-    padding: 0;
 }
 
 .vertical { 
@@ -89,6 +93,188 @@ p {
     position: absolute;
     margin-top: 10px;
     font-size: 25px;  
+}
+
+.listContainer {
+    padding-top: 50px;
+    justify-content: center;
+    position: relative;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(2, minmax(100px,500px));
+
+}
+
+.book {
+    border: solid black;
+    height: 120px;
+    color: black;
+    display: block;
+    background-color: #cccccc;
+}
+
+.descBook {
+    margin-top: -90px;
+    margin-left: 120px;
+    position: relative;
+
+}
+
+.descBook h4 {
+    width: 50%;
+    height: 40px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.nameOfTheBook {
+    margin: 0;
+}
+
+.descBook p {
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+    width: auto;
+    height: 35px;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.bookInfo .book {
+    width: 80%;
+    margin-top: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid black;
+    height: 500px;
+    color: black;
+    display: block;
+    background-color: #cccccc;
+}
+
+.bookInfoCover {
+    width: 250px;
+    height: 400px;
+    margin: 10px 20px;
+}
+
+.descBookInfo {
+    top: -400px;
+    margin-bottom: 300px;
+    padding-left: 290px;
+    position: relative;
+}
+
+.descBookInfo h4 {
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 30px;
+    height: 70px;
+
+}
+
+.descBookInfo p {
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+    width: auto;
+    height: 50px;
+    font-size: 20px;
+}
+
+.checkBoxOnList {
+    display: inline;
+    position: relative;
+    left: 90%;
+    top: -48px;
+}
+
+
+
+.addNewBookButton {
+    border-radius: 8px;
+    background-color: green;
+    padding: 5px;
+    border: 1px solid black;
+    margin-bottom: auto;
+
+}
+
+.addNewBookButton:hover ,
+.bookInfo .editInfoBookButton:hover {
+    background-color: #10ba49;
+    transition-duration: 1s;
+
+}
+
+.addNewBookButton a,
+.bookInfo .editInfoBookButton a {
+    color: white;
+}
+
+.addNewBook {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.addNewBook label {
+    font-size: 20px;
+}
+
+.addNewBook .form-group input,
+.addNewBook .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+.deleteBook {
+    padding: 3px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    position: absolute;
+    display: inline;
+    left: 65%;
+    top: -12px;
+}
+
+.bookInfo .editInfoBookButton {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 8px;
+    background-color: green;
+    padding: 5px;
+    border: 1px solid;
+    margin-bottom: auto;
+    display: inline;
+}
+
+.addDeleteList li {
+    display: inline-block;
+}
+
+.listBookCover {
+    width: 100px;
+    height: 100px;
+    margin: 5px 0;
 }
 
 .box{
@@ -146,12 +332,17 @@ p {
 }
 
 
-@media only screen and (min-width: 650px)  {
+
+@media only screen and (min-width: 768px)  {
 
     .bookCover {
         width: 75px;
         height: 75px;
         margin: 4px 0;
+    }
+
+    .deleteBook {
+        left: 75%;
     }
 
     
@@ -183,7 +374,7 @@ p {
     }
 
     .desktopArch {
-        display: inline
+        display: inline;
     }
 
     .inline li a {
@@ -197,6 +388,18 @@ p {
         border: 1px solid;
         margin: 0;
         display: inline;
+
+    }
+
+    .inline li:hover {
+        background-color: #0ae252;
+        transition-duration: 1s;
+        color: #0a0a0a;
+    }
+
+
+    .deleteBook {
+        left: 85%;
     }
 
 
@@ -220,6 +423,10 @@ p {
         margin-top: 35px;
         margin-left: -50px;
         font-size: 25px;  
+    }
+
+    .descBook h4 {
+        width: 80%;
     }
     
 
