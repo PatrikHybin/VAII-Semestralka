@@ -134,6 +134,7 @@ p {
 }
 
 .descBook p {
+    word-break: break-all;
     padding: 0;
     margin-bottom: 0;
     margin-top: 0;
@@ -182,6 +183,7 @@ p {
 }
 
 .descBookInfo p {
+    word-break: break-all;
     overflow-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
