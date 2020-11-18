@@ -46,6 +46,7 @@ class DBStorage
 
     }
 
+
     public function deleteBook(int $id) : void {
         $this->pdo->query("DELETE FROM book where $id = book.id");
     }

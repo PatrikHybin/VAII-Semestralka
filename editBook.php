@@ -5,14 +5,23 @@ $storage = new DBStorage();
 $id = $_GET['id'];
 $book = $storage->getBook($id);
 
-if (isset($_POST['bookName'],$_POST['description'])){
-    if (!empty($_FILES['image']['name'])) {
-        $imageData = file_get_contents($_FILES['image']['tmp_name']);
-        $storage->updateBook($_POST['bookName'],$_POST['description'],$imageData, $book->getId());
-    } else {
+if (isset($_POST['editBook'])) {
+
+    if($_POST['bookName'] != ""  && $_POST['description'] != "" ) {
+
+        if (!empty($_FILES['image']['name'])) {
+            $imageData = file_get_contents($_FILES['image']['tmp_name']);
+            $storage->updateBook($_POST['bookName'],$_POST['description'],$imageData, $book->getId());
+            header('Refresh: 0');
+        } /** else {
         $storage->updateBook($_POST['bookName'],$_POST['description'],$book->getImage(), $book->getId());
+
+        } */
     }
+
+
 }
+
 
 ?>
 
@@ -77,7 +86,7 @@ if (isset($_POST['bookName'],$_POST['description'])){
         </div>
 
         <div class="form-group">
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" name="editBook">
         </div>
 
     </form>

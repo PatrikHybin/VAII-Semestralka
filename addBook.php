@@ -3,15 +3,18 @@ require_once "DBStorage.php";
 $storage = new DBStorage();
 $imgContent = null;
 
-if (isset($_POST['bookName'],$_POST['description'])){
+if (isset($_POST['addBook'])) {
 
-    if (!empty($_FILES['image']['name'])) {
-        $imageData = file_get_contents($_FILES['image']['tmp_name']);
-        $storage->createBook($_POST['bookName'],$_POST['description'],$imageData);
-    } else {
-        $imageData = file_get_contents('./images/blankBook.jpg', FILE_USE_INCLUDE_PATH);
-        //$imageData = file_get_contents('http://cdn2.vectorstock.com/i/1000x1000/87/16/black-realistic-blank-book-cover-vector-5518716.jpg/');
-        $storage->createBook($_POST['bookName'],$_POST['description'],$imageData);
+    if($_POST['bookName'] != ""  && $_POST['description'] != "" ){
+
+        if (!empty($_FILES['image']['name'])) {
+            $imageData = file_get_contents($_FILES['image']['tmp_name']);
+            $storage->createBook($_POST['bookName'],$_POST['description'],$imageData);
+        } else {
+            $imageData = file_get_contents('./images/blankBook.jpg', FILE_USE_INCLUDE_PATH);
+            //$imageData = file_get_contents('http://cdn2.vectorstock.com/i/1000x1000/87/16/black-realistic-blank-book-cover-vector-5518716.jpg/');
+            $storage->createBook($_POST['bookName'],$_POST['description'],$imageData);
+        }
     }
 }
 
@@ -78,7 +81,7 @@ if (isset($_POST['bookName'],$_POST['description'])){
         </div>
 
         <div class="form-group">
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" name="addBook">
         </div>
 
     </form>
