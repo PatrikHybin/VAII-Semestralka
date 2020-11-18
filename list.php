@@ -41,9 +41,7 @@ if (isset($_POST['deleteField'])) {
 
             <nav>
                 <div>
-                    <!-- <img src="images/ham.svg" alt="Toggle menu" class="menu"> -->
-
-                    <div class="btn-group dropleft mobileMenu">
+                      <div class="btn-group dropleft mobileMenu">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="images/ham.svg" alt="Toggle menu" class="menuImgMobile">
                         </button>
